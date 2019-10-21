@@ -60,7 +60,7 @@ def settings(keyHandle, name):
     Device.VcsSetPositionProfile(keyHandle, nodeID, name.velocity, name.acceleration, name.deceleration, errorCode) #set profile parameters
     Device.VcsSetEnableState(keyHandle, nodeID, errorCode) #enable device
     
-def start(name, delta_angle):
+def start(name):
     # angle limit
     if name.angle > 75 or name.angle < -75:
         print("Angle is out of range!!!\n")
@@ -80,8 +80,7 @@ def start(name, delta_angle):
             name.direction = -1
         else:
             name.direction = 0
-        
-        delta_angle += name.direction * name.angle
+       
         # ANGLE, name.direction, delta_angle = DELTA_ANGLE(ANGLE, name.direction, delta_angle)
                 
         # continue
