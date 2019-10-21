@@ -9,5 +9,5 @@ How To Use It:
 4. >>> name = Motor()  # "name" is the motor you named it.
 5. >>> initial(name)
 6. >>> name.angle = ***   # set the parameters, for example, angle or velocity
-7. >>> start(name, delta_time)
+7. >>> start(name)
 ...... control your motor as you like
